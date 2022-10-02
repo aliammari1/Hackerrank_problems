@@ -1,5 +1,3 @@
-//Say "Hello, World!" With C++
-
 //First Method
 #include <iostream>
 #include <cstdio>
