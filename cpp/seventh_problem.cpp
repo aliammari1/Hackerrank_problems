@@ -1,4 +1,3 @@
-//pointer
 #include <iostream>
 #include <stdio.h>
 
