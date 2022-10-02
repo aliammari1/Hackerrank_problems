@@ -1,4 +1,3 @@
-//Arrays Introduction
 #include <cmath>
 #include <cstdio>
 #include <vector>
