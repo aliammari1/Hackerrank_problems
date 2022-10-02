@@ -1,4 +1,3 @@
-//Basic Data Types
 #include <iostream>
 #include <cstdio>
 using namespace std;
