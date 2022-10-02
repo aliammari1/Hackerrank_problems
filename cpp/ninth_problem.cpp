@@ -1,4 +1,3 @@
-//Variable Sized Arrays
 #include <cmath>
 #include <cstdio>
 #include <vector>
