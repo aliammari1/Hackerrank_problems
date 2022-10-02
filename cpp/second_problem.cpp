@@ -1,4 +1,3 @@
-//Input and Output
 #include <cmath>
 #include <cstdio>
 #include <vector>
