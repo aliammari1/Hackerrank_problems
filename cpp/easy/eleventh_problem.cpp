@@ -19,8 +19,6 @@ int main() {
 
 
 
-
-
 //second method
 /*#include <iostream>
 #include <string>
