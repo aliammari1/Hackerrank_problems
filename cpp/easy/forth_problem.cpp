@@ -6,7 +6,6 @@ string ltrim(const string &);
 string rtrim(const string &);
 
 
-
 int main()
 {
     string n_temp;
