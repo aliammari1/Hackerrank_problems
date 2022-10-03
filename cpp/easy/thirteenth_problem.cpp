@@ -2,6 +2,7 @@
 #include <sstream>
 using namespace std;
 
+
 class Student {
     int age;
     string first_name;
