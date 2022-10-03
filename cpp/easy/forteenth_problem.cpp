@@ -6,6 +6,7 @@
 #include <cassert>
 using namespace std;
 
+
 class Student {
     vector<int> scores = {};
     public:
