@@ -3,6 +3,7 @@
 
 using namespace std;
 
+
 void update(int *a,int *b) {
     // Complete this function 
     int x = *b;
