@@ -2,6 +2,7 @@
 #include <cstdio>
 using namespace std;
 
+
 int main() {
     // Complete the code.
     int a;
