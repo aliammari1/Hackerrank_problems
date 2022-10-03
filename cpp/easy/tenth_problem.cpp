@@ -3,6 +3,7 @@
 #include <iostream>
 using namespace std;
 
+
 vector<int> parseInts(string str) {
 	stringstream ss(str);
     char ch = 0;
