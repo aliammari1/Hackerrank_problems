@@ -11,3 +11,4 @@ public class fourth_problem {
         System.out.println("Int: "+ x);
     }
 }
+
