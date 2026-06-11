@@ -1,0 +1,13 @@
+version: 2
+updates:
+  # This is a compiler-only archive (no package manifests), so the only thing
+  # worth keeping current is the GitHub Actions used in CI.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+    labels:
+      - "dependencies"
+      - "github-actions"

@@ -1,0 +1,22 @@
+# clang-format config for the C++ solution archive.
+# Mirrors the existing house style (4-space indent, Allman-ish braces kept
+# loose for competitive-style code). Tuned to minimise churn on the current
+# files; run `clang-format -i cpp/**/*.cpp` to apply.
+---
+Language: Cpp
+BasedOnStyle: Google
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 100
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+DerivePointerAlignment: false
+PointerAlignment: Left
+SortIncludes: false
+SpaceBeforeParens: ControlStatements
+# Do not reflow/wrap comments: the auto-generated header blocks
+# (scripts/generate.py) must round-trip byte-for-byte through clang-format,
+# otherwise the format gate and the index --check gate would disagree.
+ReflowComments: false

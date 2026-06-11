@@ -1,0 +1,122 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  cpp:
+    name: Compile C++ (g++ -std=c++17 -Wall)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install g++
+        run: sudo apt-get update && sudo apt-get install -y g++
+      - name: Compile every .cpp and fail on any error
+        run: |
+          set -euo pipefail
+          shopt -s globstar nullglob
+          status=0
+          for file in cpp/**/*.cpp; do
+            echo "::group::g++ $file"
+            if g++ -std=c++17 -Wall "$file" -o /tmp/sol.out; then
+              echo "OK: $file"
+            else
+              echo "::error file=$file::compilation failed"
+              status=1
+            fi
+            echo "::endgroup::"
+          done
+          exit $status
+
+  java:
+    name: Compile Java (javac)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - name: Compile every .java and fail on any error
+        run: |
+          set -euo pipefail
+          shopt -s globstar nullglob
+          status=0
+          mkdir -p /tmp/jout
+          for file in java/**/*.java; do
+            echo "::group::javac $file"
+            # Each file is compiled in isolation so per-file public class names
+            # (first_problem, second_problem, ...) do not collide.
+            if javac -d "/tmp/jout/$(basename "$file" .java)" "$file"; then
+              echo "OK: $file"
+            else
+              echo "::error file=$file::compilation failed"
+              status=1
+            fi
+            echo "::endgroup::"
+          done
+          exit $status
+
+  index:
+    name: Headers + README index up to date
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify generated headers and README index are committed
+        run: python scripts/generate.py --check
+
+  clang-format:
+    name: clang-format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run cpp-linter (format only, fails on diff)
+        uses: cpp-linter/cpp-linter-action@v2
+        id: linter
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          style: file
+          tidy-checks: '-*'
+          files-changed-only: false
+          version: 19
+      - name: Fail if formatting issues were found
+        if: steps.linter.outputs.checks-failed > 0
+        run: |
+          echo "clang-format found ${{ steps.linter.outputs.checks-failed }} issue(s)."
+          exit 1
+
+  java-format:
+    name: google-java-format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+      - name: Check Java formatting (google-java-format, AOSP style)
+        run: |
+          set -euo pipefail
+          VERSION=1.22.0
+          curl -fsSL -o /tmp/gjf.jar \
+            "https://github.com/google/google-java-format/releases/download/v${VERSION}/google-java-format-${VERSION}-all-deps.jar"
+          mapfile -t files < <(find java -name '*.java')
+          # --aosp = 4-space indent, matching this archive's existing style.
+          if ! java -jar /tmp/gjf.jar --aosp --dry-run --set-exit-if-changed "${files[@]}"; then
+            echo "::error::Java files are not formatted. Run: java -jar google-java-format.jar --aosp --replace java/**/*.java"
+            exit 1
+          fi
