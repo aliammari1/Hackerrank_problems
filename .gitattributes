@@ -1,0 +1,4 @@
+# Normalise line endings so the clang-format / google-java-format / generator
+# round-trip is identical on Linux CI and on Windows checkouts.
+* text=auto eol=lf
+*.png binary
