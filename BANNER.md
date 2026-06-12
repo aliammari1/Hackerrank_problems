@@ -1,27 +1,35 @@
-# Banner / social preview spec
+# Banner / social preview
 
-> TODO: generate the assets below with the `brandkit` skill and commit them to
-> `assets/`, then wire the hero into `README.md` (replace the `TODO(banner)`
-> comment at the top) and set the 1280×640 image as the GitHub social preview
-> (Settings → Social preview).
+One prompt, two crops. Generate with the `brandkit` skill (or any image model),
+export to `assets/banner.png` (1280×640, GitHub social preview) and
+`assets/banner-hero.svg` (or `.png`, wide README hero), then:
 
-## Direction
+1. Replace the `TODO(banner)` comment at the top of `README.md` with the hero
+   (`assets/banner-hero.*`).
+2. Set `assets/banner.png` as the GitHub social preview
+   (Settings → Social preview).
 
-Terminal / HackerRank-green. Think a dark code-terminal background (near-black,
-`#0a0e0a`) with the signature HackerRank green (`#2EC866` / `#1BA94C`) accent,
-a monospace title, and a faint scanline/CRT texture. The mood is "the work
-speaks for me": clean, technical, no stock clip-art.
+Commit the assets **locally** so they never rate-limit or 404.
 
-## Assets to produce
+## The prompt
+
+> A dark code-terminal banner, near-black background `#0a0e0a` with a faint
+> CRT scanline texture and subtle vignette. A monospace title reads
+> **"HackerRank Problems"** in HackerRank green `#2EC866`, with a dimmer
+> `#1BA94C` subtitle **"C++ · Java · compile-checked archive"** beneath it.
+> To the left, a green `>` prompt glyph and a single typed command line
+> `> g++ -std=c++17 -Wall solution.cpp` with a blinking block cursor. A small
+> stat line in muted green reads **"30 problems · 2 languages"**. The handle
+> `@aliammari1` sits understated in the bottom-right corner. Flat, technical,
+> editorial — no stock clip-art, no gradients beyond the vignette, no people.
+> The mood: "the work speaks for me."
+
+## Specs
 
 | File | Size | Use |
 |------|------|-----|
-| `assets/social-preview.png` | 1280×640 | GitHub social preview (Settings → Social preview) |
-| `assets/hero.png` (or `.svg`) | ~1600×400 | wide README hero at the top |
+| `assets/banner.png` | 1280×640 | GitHub social preview |
+| `assets/banner-hero.svg` / `.png` | ~1600×400 | wide README hero |
 
-## Content cues
-
-- Title: `HackerRank Problems` in mono, with a subtitle `C++ · Java · compile-checked archive`.
-- A small green terminal prompt motif (`$ g++ -std=c++17 -Wall …`).
-- Author handle `@aliammari1` bottom-corner, understated.
-- Commit assets as **local** PNG/SVG so they never rate-limit or 404.
+Palette: terminal-black `#0a0e0a`, HackerRank green `#2EC866`, dim green
+`#1BA94C`. Type: a clean monospace (e.g. JetBrains Mono / IBM Plex Mono).
