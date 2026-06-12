@@ -1,7 +1,14 @@
-# Solutions
+---
+title: HackerRank Solutions Index (C++ & Java)
+description: Index of HackerRank solutions in C++ and Java, by topic and language, each linking to the original challenge.
+---
 
-| Problem | Language | Topic | HackerRank |
-|---------|----------|-------|------------|
+# HackerRank Solutions Index
+
+Every entry is a *hackerrank \<challenge\> solution* in C++ or Java. Use the search bar to jump to a specific challenge.
+
+| Problem (hackerrank solution) | Language | Topic | HackerRank |
+|-------------------------------|----------|-------|------------|
 | `Say "Hello, World!" With C++` | C++ | Introduction | [open](https://www.hackerrank.com/challenges/cpp-hello-world/problem) |
 | `Input and Output` | C++ | Introduction | [open](https://www.hackerrank.com/challenges/cpp-input-and-output/problem) |
 | `Basic Data Types` | C++ | Introduction | [open](https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem) |

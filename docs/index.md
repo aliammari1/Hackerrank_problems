@@ -1,7 +1,14 @@
-# HackerRank Problems — C++ & Java
+---
+title: HackerRank Solutions in C++ and Java
+description: A searchable, compile-checked archive of HackerRank solutions in C++ and Java, organized by topic with complexity analysis.
+---
+
+# HackerRank Solutions in C++ and Java
 
 A compile-checked archive of my [HackerRank](https://www.hackerrank.com/)
-solutions, written in **C++** and **Java**.
+solutions, written in **C++** and **Java**, organized by topic with complexity
+analysis. Use the **search** (top bar) to jump straight to a
+*hackerrank \<challenge\> solution*.
 
 !!! note "Problem statements are HackerRank IP"
     This site and repository contain **only my own solution code** — never the
@@ -30,3 +37,10 @@ The judge expects `public class Solution`. To keep every solution in one folder
 and compile together, this archive uses a **unique class per file**
 (`first_problem`, `second_problem`, …). When submitting on HackerRank, rename the
 class to `Solution` — every Java file repeats this note in its header.
+
+## Related projects
+
+- **[LeetCode solutions](https://github.com/aliammari1/Leetcode_problems)** —
+  the companion LeetCode archive (same header + complexity style).
+- **[@aliammari1](https://github.com/aliammari1)** — profile hub for the rest of
+  the projects.
