@@ -1,6 +1,8 @@
-<!-- TODO(banner): replace with the 1280x640 terminal / HackerRank-green hero
-     once generated. See BANNER.md for the spec. Until then this repo has no
-     remote-hosted hero image, so nothing 404s. -->
+<!-- TODO(banner): replace this comment with the wide hero once generated:
+     ![HackerRank Problems](assets/banner-hero.svg)
+     and set assets/banner.png as the GitHub social preview. See BANNER.md for
+     the single image-gen prompt. Until then no remote hero is referenced, so
+     nothing 404s. -->
 
 # HackerRank Problems &mdash; C++ & Java Archive
 
@@ -16,6 +18,35 @@ every push, so the archive stays green and self-documenting.
 
 > Problem statements are the intellectual property of HackerRank. This repo
 > contains **only my own solution code**, not the problem text or test data.
+
+## Browse online (live docs)
+
+The whole archive is published as a searchable **mkdocs-material** site on
+**Cloudflare Pages** — the easiest way to browse:
+
+**▶ Live docs: https://hackerrank-problems.pages.dev**
+
+- **Solutions** — the full index, filterable by language and topic.
+- **C++ vs Java** — the same fundamentals solved in both languages, shown with
+  **content tabs** so you can flip between them side by side.
+
+The site is rebuilt and redeployed by [`docs.yml`](.github/workflows/docs.yml)
+on every push that touches a solution or the docs. To run it locally:
+
+```bash
+pip install -r docs/requirements.txt
+mkdocs serve   # then open http://127.0.0.1:8000
+```
+
+## How to navigate
+
+- **Quick scan** → the [Solutions Index](#solutions-index) table below (problem,
+  language, difficulty, topic, original link).
+- **By language** → [`cpp/easy/`](cpp/easy) and [`java/easy/`](java/easy).
+- **C++ vs Java** → the [side-by-side page](docs/side-by-side.md) on the live
+  site renders both in tabs.
+- Every file opens with a header block (problem, link, difficulty, topic,
+  approach, complexity), so any single file is self-explanatory.
 
 ## Repository layout
 
@@ -101,7 +132,13 @@ python scripts/generate.py --check    # CI mode: non-zero exit if anything is st
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) — it is intentionally short (naming +
-header rules only; this is an archive, not a product).
+header rules only; this is an archive, not a product). Missing solutions are
+tracked as [good first issues](https://github.com/aliammari1/Hackerrank_problems/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22).
+
+## Topics
+
+For discoverability, set the GitHub repo topics to: `hackerrank`,
+`competitive-programming`, `dsa`, `cpp`, `java`, `hacktoberfest`.
 
 ## License
 
