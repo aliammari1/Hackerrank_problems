@@ -4,27 +4,43 @@
      the single image-gen prompt. Until then no remote hero is referenced, so
      nothing 404s. -->
 
-# HackerRank Problems &mdash; C++ & Java Archive
+# HackerRank Problems &mdash; C++ & Java Solutions
 
-A personal, compile-checked archive of my [HackerRank](https://www.hackerrank.com/)
-solutions in **C++** and **Java**. Every file carries a standardized header
-(problem, link, difficulty, topic, approach, complexity) and is compiled in CI on
-every push, so the archive stays green and self-documenting.
+**HackerRank solutions in C++ and Java, organized by topic, each with a
+complexity-annotated header and compiled in CI** — a clean, self-documenting
+archive (23 C++ / 7 Java) you can read, search, and learn from.
+
+[**🔎 Browse solutions (C++ vs Java side-by-side) →**](https://hackerrank-problems.pages.dev)
+
+If this helps your interview prep, **⭐ star the repo** — it keeps the archive
+discoverable for the next person searching for a HackerRank solution.
 
 [![CI](https://github.com/aliammari1/Hackerrank_problems/actions/workflows/ci.yml/badge.svg)](https://github.com/aliammari1/Hackerrank_problems/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/aliammari1/Hackerrank_problems?style=social)](https://github.com/aliammari1/Hackerrank_problems/stargazers)
 ![C++17](https://img.shields.io/badge/C%2B%2B-17-00599C?logo=c%2B%2B)
 ![Java](https://img.shields.io/badge/Java-21-007396?logo=openjdk)
 
 > Problem statements are the intellectual property of HackerRank. This repo
 > contains **only my own solution code**, not the problem text or test data.
 
-## Browse online (live docs)
+## Why this archive
+
+- **Organized by topic & language** — Introduction, STL, Strings, Classes,
+  Inheritance, and more, in both **C++** and **Java**.
+- **Complexity analysis on every file** — a standardized header (problem, link,
+  difficulty, topic, approach, time/space) so any single file is self-explanatory.
+- **Always green** — every `.cpp` and `.java` is compiled in CI on every push;
+  the build fails on any error.
+- **Searchable docs** — the whole archive is a live mkdocs-material site (below).
+
+## Browse online (live docs — the demo)
 
 The whole archive is published as a searchable **mkdocs-material** site on
-**Cloudflare Pages** — the easiest way to browse:
+**Cloudflare Pages** — the easiest way to browse, with **C++ vs Java shown in
+content tabs** side by side:
 
-**▶ Live docs: https://hackerrank-problems.pages.dev**
+[**🔎 Browse solutions →  https://hackerrank-problems.pages.dev**](https://hackerrank-problems.pages.dev)
 
 - **Solutions** — the full index, filterable by language and topic.
 - **C++ vs Java** — the same fundamentals solved in both languages, shown with
@@ -138,9 +154,21 @@ tracked as [good first issues](https://github.com/aliammari1/Hackerrank_problems
 ## Topics
 
 For discoverability, set the GitHub repo topics to: `hackerrank`,
-`competitive-programming`, `dsa`, `cpp`, `java`, `hacktoberfest`.
+`competitive-programming`, `dsa`, `cpp`, `java`, `hacktoberfest`,
+`coding-interview`, `algorithms`.
+
+## Related projects
+
+- **[Leetcode_problems](https://github.com/aliammari1/Leetcode_problems)** —
+  the companion LeetCode solution archive (same header + complexity style).
+- **[@aliammari1](https://github.com/aliammari1)** — profile hub linking the
+  rest of the projects (apps, games, data tools).
 
 ## License
 
 [MIT](LICENSE) © Ali Ammari ([@aliammari1](https://github.com/aliammari1)).
 Solution code only; HackerRank owns the problem statements.
+
+---
+
+If this archive saved you time, **⭐ [star it](https://github.com/aliammari1/Hackerrank_problems/stargazers)**.

@@ -1,4 +1,9 @@
-# C++ vs Java
+---
+title: HackerRank Solutions — C++ vs Java (side by side)
+description: HackerRank solutions shown in C++ and Java side by side with content tabs, so you can compare the two languages directly.
+---
+
+# HackerRank Solutions: C++ vs Java
 
 The same fundamentals solved in both languages. Use the tabs to flip between a representative C++ solution and a Java one.
 

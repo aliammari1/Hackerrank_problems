@@ -204,10 +204,22 @@ def build_docs(check: bool) -> bool:
     docs = ROOT / "docs"
     changed = False
 
-    # --- solutions.md : one table, all solutions ---
-    rows = ["# Solutions", "",
-            "| Problem | Language | Topic | HackerRank |",
-            "|---------|----------|-------|------------|"]
+    # --- solutions.md : one table, all solutions (SEO front-matter) ---
+    rows = [
+        "---",
+        "title: HackerRank Solutions Index (C++ & Java)",
+        "description: Index of HackerRank solutions in C++ and Java, by topic "
+        "and language, each linking to the original challenge.",
+        "---",
+        "",
+        "# HackerRank Solutions Index",
+        "",
+        "Every entry is a *hackerrank \\<challenge\\> solution* in C++ or Java. "
+        "Use the search bar to jump to a specific challenge.",
+        "",
+        "| Problem (hackerrank solution) | Language | Topic | HackerRank |",
+        "|-------------------------------|----------|-------|------------|",
+    ]
     for rel in files:
         m = meta.get(rel, {})
         url = m.get("url")
@@ -221,9 +233,17 @@ def build_docs(check: bool) -> bool:
     # --- side-by-side.md : content tabs pairing C++ and Java by topic ---
     cpp = [f for f in files if f.endswith(".cpp")]
     java = [f for f in files if f.endswith(".java")]
-    out = ["# C++ vs Java", "",
-           "The same fundamentals solved in both languages. Use the tabs to flip "
-           "between a representative C++ solution and a Java one.", ""]
+    out = [
+        "---",
+        "title: HackerRank Solutions — C++ vs Java (side by side)",
+        "description: HackerRank solutions shown in C++ and Java side by side "
+        "with content tabs, so you can compare the two languages directly.",
+        "---",
+        "",
+        "# HackerRank Solutions: C++ vs Java",
+        "",
+        "The same fundamentals solved in both languages. Use the tabs to flip "
+        "between a representative C++ solution and a Java one.", ""]
 
     def code_tab(rel: str) -> list[str]:
         lang = "cpp" if rel.endswith(".cpp") else "java"
