@@ -1,11 +1,11 @@
 /*
  * Auto-generated header (scripts/generate.py) -- edit metadata.json, not this block.
  *
- * Problem    : Input and Output
- * HackerRank : https://www.hackerrank.com/challenges/cpp-input-and-output/problem
+ * Problem    : Structs
+ * HackerRank : https://www.hackerrank.com/challenges/c-tutorial-struct/problem
  * Difficulty : Easy
- * Topic      : Introduction
- * Approach   : Read three integers and print their sum.
+ * Topic      : Classes
+ * Approach   : Read a Student struct's fields and print them back.
  * Time       : O(1)
  * Space      : O(1)
  *
@@ -22,12 +22,16 @@
 #include <algorithm>
 using namespace std;
 
+struct Student {
+    int age, standard;
+    string first_name, last_name;
+};
+
 int main() {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    int x = 0, y = 0, z = 0;
-    cin >> x;
-    cin >> y;
-    cin >> z;
-    cout << x + y + z << endl;
+    Student st;
+
+    cin >> st.age >> st.first_name >> st.last_name >> st.standard;
+    cout << st.age << " " << st.first_name << " " << st.last_name << " " << st.standard;
+
     return 0;
 }

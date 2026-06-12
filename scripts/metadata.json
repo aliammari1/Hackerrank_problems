@@ -1,0 +1,245 @@
+{
+  "_comment": "Per-solution metadata used by generate.py to build standardized header blocks and the README index. 'url' / 'name' / 'topic' set to null mean the real HackerRank problem could not be reliably identified from an ordinal filename; the generator emits a TODO marker for those fields. Fill them in when confirmed. Difficulty is 'Easy' for everything currently under the easy/ folders.",
+
+  "cpp/easy/first_problem.cpp": {
+    "name": "Say \"Hello, World!\" With C++",
+    "url": "https://www.hackerrank.com/challenges/cpp-hello-world/problem",
+    "topic": "Introduction",
+    "approach": "Print the required string to stdout.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "cpp/easy/second_problem.cpp": {
+    "name": "Input and Output",
+    "url": "https://www.hackerrank.com/challenges/cpp-input-and-output/problem",
+    "topic": "Introduction",
+    "approach": "Read three integers and print their sum.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "cpp/easy/third_problem.cpp": {
+    "name": "Basic Data Types",
+    "url": "https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem",
+    "topic": "Introduction",
+    "approach": "Read int, long, char, float, double and print each with the required precision.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "cpp/easy/forth_problem.cpp": {
+    "name": "Conditional Statements (number to word, n <= 9)",
+    "url": "https://www.hackerrank.com/challenges/c-tutorial-conditional-if-else/problem",
+    "topic": "Introduction",
+    "approach": "Map 1..9 to its English word, otherwise print 'Greater than 9'. Uses a custom ltrim/rtrim to clean the input line.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "cpp/easy/fifth_problem.cpp": {
+    "name": "For Loop",
+    "url": "https://www.hackerrank.com/challenges/c-tutorial-for-loop/problem",
+    "topic": "Introduction",
+    "approach": "Iterate from a to b; print the word for 1..9, otherwise 'even'/'odd'.",
+    "time": "O(b - a)",
+    "space": "O(1)"
+  },
+  "cpp/easy/sixth_problem.cpp": {
+    "name": "Functions",
+    "url": "https://www.hackerrank.com/challenges/c-tutorial-functions/problem",
+    "topic": "Introduction",
+    "approach": "Implement max_of_four by pairwise comparison.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "cpp/easy/seventh_problem.cpp": {
+    "name": "Pointers",
+    "url": "https://www.hackerrank.com/challenges/c-tutorial-pointer/problem",
+    "topic": "Introduction",
+    "approach": "Via pointers, set *a to the sum and *b to the absolute difference.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "cpp/easy/eighth_problem.cpp": {
+    "name": "Arrays Introduction",
+    "url": "https://www.hackerrank.com/challenges/arrays-introduction/problem",
+    "topic": "STL",
+    "approach": "Read n integers and print them in reverse order.",
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "cpp/easy/ninth_problem.cpp": {
+    "name": "Variable Sized Arrays",
+    "url": "https://www.hackerrank.com/challenges/variable-sized-arrays/problem",
+    "topic": "STL",
+    "approach": "Store a jagged 2D vector, then answer (i, j) index queries in O(1) each.",
+    "time": "O(total elements + q)",
+    "space": "O(total elements)"
+  },
+  "cpp/easy/tenth_problem.cpp": {
+    "name": "StringStream",
+    "url": "https://www.hackerrank.com/challenges/c-tutorial-stringstream/problem",
+    "topic": "Strings",
+    "approach": "Parse a comma-separated list of ints with a stringstream, discarding commas.",
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "cpp/easy/eleventh_problem.cpp": {
+    "name": "Strings",
+    "url": "https://www.hackerrank.com/challenges/c-tutorial-strings/problem",
+    "topic": "Strings",
+    "approach": "Print both lengths, the concatenation, then swap the first characters and reprint.",
+    "time": "O(|a| + |b|)",
+    "space": "O(|a| + |b|)"
+  },
+  "cpp/easy/twelfth_problem.cpp": {
+    "name": "Structs",
+    "url": "https://www.hackerrank.com/challenges/c-tutorial-struct/problem",
+    "topic": "Classes",
+    "approach": "Read a Student struct's fields and print them back.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "cpp/easy/thirteenth_problem.cpp": {
+    "name": "Class",
+    "url": "https://www.hackerrank.com/challenges/c-tutorial-class/problem",
+    "topic": "Classes",
+    "approach": "Encapsulate Student fields behind getters/setters plus a to_string() helper.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "cpp/easy/fourteenth_problem.cpp": {
+    "name": "Classes and Objects",
+    "url": "https://www.hackerrank.com/challenges/classes-objects/problem",
+    "topic": "Classes",
+    "approach": "Build n Student objects, total each one's five scores, and count how many beat student 0 (Kristen).",
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "cpp/easy/fifteenth_problem.cpp": {
+    "name": "Box It!",
+    "url": "https://www.hackerrank.com/challenges/box-it/problem",
+    "topic": "Classes",
+    "approach": "A Box class with constructors, a copy constructor, volume, operator< and operator<< handling the five query types.",
+    "time": "O(q)",
+    "space": "O(1)"
+  },
+  "cpp/easy/sixteenth_problem.cpp": {
+    "name": "Vector-Sort",
+    "url": "https://www.hackerrank.com/challenges/vector-sort/problem",
+    "topic": "STL",
+    "approach": "Read into a vector and std::sort ascending.",
+    "time": "O(n log n)",
+    "space": "O(n)"
+  },
+  "cpp/easy/seventeenth_problem.cpp": {
+    "name": "Vector-Erase",
+    "url": "https://www.hackerrank.com/challenges/vector-erase/problem",
+    "topic": "STL",
+    "approach": "Erase a single 1-based index, then erase a [a, b) range, then print the remaining size and elements.",
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "cpp/easy/eighteenth_problem.cpp": {
+    "name": "Lower Bound-STL",
+    "url": "https://www.hackerrank.com/challenges/cpp-lower-bound/problem",
+    "topic": "STL",
+    "approach": "For each query, binary_search for presence and lower_bound for the 1-based position.",
+    "time": "O((n + q) log n)",
+    "space": "O(n)"
+  },
+  "cpp/easy/nineteenth_problem.cpp": {
+    "name": "Sets-STL",
+    "url": "https://www.hackerrank.com/challenges/cpp-sets/problem",
+    "topic": "STL",
+    "approach": "Maintain a std::set under insert / erase / find queries.",
+    "time": "O(n log n)",
+    "space": "O(n)"
+  },
+  "cpp/easy/twentieth_problem.cpp": {
+    "name": "Maps-STL",
+    "url": "https://www.hackerrank.com/challenges/cpp-maps/problem",
+    "topic": "STL",
+    "approach": "Maintain a std::map<string,int> under add / delete / query operations.",
+    "time": "O(q log n)",
+    "space": "O(n)"
+  },
+  "cpp/easy/twentyfirst_problem.cpp": {
+    "name": "Inheritance Introduction",
+    "url": "https://www.hackerrank.com/challenges/inheritance-introduction/problem",
+    "topic": "Inheritance",
+    "approach": "Add a description() method to an Isosceles class that derives from Triangle.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "cpp/easy/twentysecond_problem.cpp": {
+    "name": "Rectangle Area",
+    "url": "https://www.hackerrank.com/challenges/rectangle-area/problem",
+    "topic": "Inheritance",
+    "approach": "RectangleArea derives from Rectangle, reads dimensions, and overrides display() to print the area.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "cpp/easy/twentythird_problem.cpp": {
+    "name": "Multi Level Inheritance",
+    "url": "https://www.hackerrank.com/challenges/multi-level-inheritance/problem",
+    "topic": "Inheritance",
+    "approach": "Equilateral derives from Isosceles derives from Triangle; add equilateral().",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+
+  "java/easy/first_problem.java": {
+    "name": "Welcome to Java! / Java Stdin and Stdout I",
+    "url": null,
+    "topic": "Introduction",
+    "approach": "Print the two required greeting lines. (Ordinal filename; exact challenge slug unconfirmed.)",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "java/easy/second_problem.java": {
+    "name": "Java Stdin and Stdout I",
+    "url": "https://www.hackerrank.com/challenges/java-stdin-and-stdout-1/problem",
+    "topic": "Introduction",
+    "approach": "Read three integers from stdin and echo them on separate lines.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "java/easy/third_problem.java": {
+    "name": "Java If-Else",
+    "url": "https://www.hackerrank.com/challenges/java-if-else/problem",
+    "topic": "Introduction",
+    "approach": "Classify n as Weird/Not Weird per the odd/even and range rules.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "java/easy/fourth_problem.java": {
+    "name": "Java Stdin and Stdout II",
+    "url": "https://www.hackerrank.com/challenges/java-stdin-stdout/problem",
+    "topic": "Introduction",
+    "approach": "Read an int, a double and a string and print them in the required order.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "java/easy/fifth_problem.java": {
+    "name": "Java Output Formatting",
+    "url": "https://www.hackerrank.com/challenges/java-output-formatting/problem",
+    "topic": "Introduction",
+    "approach": "Use printf with %-14s and %03d to left-pad strings and zero-pad numbers.",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "java/easy/sixth_problem.java": {
+    "name": "Java Loops II (multiplication table)",
+    "url": null,
+    "topic": "Introduction",
+    "approach": "Print the multiplication table of N from 1 to 10. (Ordinal filename; exact challenge slug unconfirmed.)",
+    "time": "O(1)",
+    "space": "O(1)"
+  },
+  "java/easy/seventh_problem.java": {
+    "name": "Java Loops",
+    "url": "https://www.hackerrank.com/challenges/java-loops/problem",
+    "topic": "Introduction",
+    "approach": "For each query print a, a+2^0*b, a+(2^0+2^1)*b, ... building the series incrementally.",
+    "time": "O(q * n)",
+    "space": "O(1)"
+  }
+}
