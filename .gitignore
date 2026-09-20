@@ -1,0 +1,29 @@
+# mkdocs build output
+/site/
+
+# Compiled binaries / objects
+*.out
+*.exe
+*.o
+*.obj
+a.out
+
+# Java build artifacts
+*.class
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+
+# Internal growth/marketing notes (not for public)
+GROWTH.md
+BANNER.md
+SUBMITTING_TO_AWESOME.md
+launch-kit.md
+star-strategy.md
+modernization-backlog.md

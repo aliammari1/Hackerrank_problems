@@ -1,12 +1,12 @@
 /*
  * Auto-generated header (scripts/generate.py) -- edit metadata.json, not this block.
  *
- * Problem    : Lower Bound-STL
- * HackerRank : https://www.hackerrank.com/challenges/cpp-lower-bound/problem
+ * Problem    : Maps-STL
+ * HackerRank : https://www.hackerrank.com/challenges/cpp-maps/problem
  * Difficulty : Easy
  * Topic      : STL
- * Approach   : For each query, binary_search for presence and lower_bound for the 1-based position.
- * Time       : O((n + q) log n)
+ * Approach   : Maintain a std::map<string,int> under add / delete / query operations.
+ * Time       : O(q log n)
  * Space      : O(n)
  *
  * Note: problem statements are the intellectual property of HackerRank.
@@ -19,23 +19,31 @@
 #include <cstdio>
 #include <vector>
 #include <iostream>
+#include <set>
+#include <map>
 #include <algorithm>
 using namespace std;
 
 int main() {
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
-    int N = 0;
-    cin >> N;
-    vector<unsigned long long> X(N, 0);
-    for (int i = 0; i < N; i++)
-        cin >> X[i];
     int Q = 0;
     cin >> Q;
+    map<string, int> m = {};
     for (int i = 0; i < Q; i++) {
-        unsigned long long Y = 0;
-        cin >> Y;
-        (binary_search(X.begin(), X.end(), Y)) ? cout << "Yes " : cout << "No ";
-        cout << distance(X.begin(), lower_bound(X.begin(), X.end(), Y)) + 1 << endl;
+        int type = 0;
+        cin >> type;
+        string X = "";
+        cin >> X;
+        m.insert({X, 0});
+        if (type == 1) {
+            int Y = 0;
+            cin >> Y;
+            m.find(X)->second += Y;
+        } else if (type == 2) {
+            m.erase(X);
+        } else {
+            cout << m.find(X)->second << endl;
+        }
     }
     return 0;
 }

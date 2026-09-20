@@ -1,0 +1,44 @@
+site_name: HackerRank Problems — C++ & Java
+site_description: A compile-checked archive of HackerRank solutions in C++ and Java.
+site_author: Ali Ammari
+repo_url: https://github.com/aliammari1/Hackerrank_problems
+repo_name: aliammari1/Hackerrank_problems
+copyright: >
+  Solution code © Ali Ammari, MIT. Problem statements are © HackerRank.
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+  features:
+    - content.code.copy
+    - content.tabs.link
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - tables
+
+nav:
+  - Home: index.md
+  - Solutions: solutions.md
+  - C++ vs Java: side-by-side.md

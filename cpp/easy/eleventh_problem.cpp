@@ -1,11 +1,28 @@
-//first method
+/*
+ * Auto-generated header (scripts/generate.py) -- edit metadata.json, not this block.
+ *
+ * Problem    : Strings
+ * HackerRank : https://www.hackerrank.com/challenges/c-tutorial-strings/problem
+ * Difficulty : Easy
+ * Topic      : Strings
+ * Approach   : Print both lengths, the concatenation, then swap the first characters and reprint.
+ * Time       : O(|a| + |b|)
+ * Space      : O(|a| + |b|)
+ *
+ * Note: problem statements are the intellectual property of HackerRank.
+ * This file contains only the author's own solution code.
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+// first method
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
-	// Complete the program
-    string a="",b="";
+    // Complete the program
+    string a = "", b = "";
     cin >> a >> b;
     cout << a.size() << " " << b.size() << endl;
     cout << a + b << endl;
@@ -16,16 +33,13 @@ int main() {
     return 0;
 }
 
-
-
-
-//second method
+// second method
 /*#include <iostream>
 #include <string>
 using namespace std;
 
 int main() {
-	// Complete the program
+    // Complete the program
     string a="",b="";
     cin >> a >> b;
     cout << a.size() << " " << b.size() << endl;
